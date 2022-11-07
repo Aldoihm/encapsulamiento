@@ -1,9 +1,20 @@
 package main
 
-import "github.com/Aldoihm/encapsulamiento/course"
+import (
+	"fmt"
+
+	"github.com/Aldoihm/encapsulamiento/course"
+)
 
 func main() {
-	goland := course.Course{
+	goland := course.New("go", 1, false)
+	goland.UsersIDs = []uint{12, 56, 89}
+	goland.Classes = map[uint]string{
+		1: "Introducción",
+		2: "Estructuras",
+		3: "Maps",
+	}
+	/* goland := &course.Course{
 		Name:  "Go",
 		Price: 12.34,
 		Classes: map[uint]string{
@@ -12,9 +23,10 @@ func main() {
 			3: "Operadores",
 			4: "Condicionales",
 		},
-	}
+	} */
 	//Así llamamos un método en Go, igual es diferente a las funciones
-	goland.PrintClases()
+	//goland.PrintClases()
+	fmt.Printf("%+v", goland)
 }
 
 //PASOS DE COMO ENCAPSULE ESTE PROYECTO
