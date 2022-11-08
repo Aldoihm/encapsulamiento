@@ -8,26 +8,37 @@ import (
 
 func main() {
 	goland := course.New("go", 1, false)
-	goland.UsersIDs = []uint{12, 56, 89}
-	goland.Classes = map[uint]string{
+	goland.SetName("Poo con Go")
+	goland.SetPrice(5.50)
+	goland.SetIsFree(true)
+	goland.SetUsersIDs([]uint{12, 56, 89})
+	goland.SetClases(map[uint]string{
 		1: "Introducción",
 		2: "Estructuras",
 		3: "Maps",
-	}
-	/* goland := &course.Course{
-		Name:  "Go",
-		Price: 12.34,
-		Classes: map[uint]string{
-			1: "Variables",
-			2: "Tipos de Datos",
-			3: "Operadores",
-			4: "Condicionales",
-		},
-	} */
-	//Así llamamos un método en Go, igual es diferente a las funciones
-	//goland.PrintClases()
-	fmt.Printf("%+v", goland)
+	})
+
+	fmt.Println(goland.Name())
+	fmt.Println(goland.Price())
+	fmt.Println(goland.IsFree())
+	fmt.Println(goland.UsersIDs())
+	fmt.Println(goland.Classes())
+
+	goland.PrintClases()
+
+	/*
+		goland.UsersIDs = []uint{12, 56, 89}
+		goland.Classes = map[uint]string{
+			1: "Introducción",
+			2: "Estructuras",
+			3: "Maps",
+		} */
+	//fmt.Println(goland.Classes)
+
 }
+
+//En Go no es necesario los métodos setters y getters
+//En este ejercicio, cambiamos el campo de Classes como no exportados y lo dejamos en classes
 
 //PASOS DE COMO ENCAPSULE ESTE PROYECTO
 /*
