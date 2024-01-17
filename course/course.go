@@ -20,6 +20,6 @@ func (c Course) PrintClasses() {
 }
 
 // Como quiero hacer un cambio, al valor original y no a la copia, pongo de receptor un puntero
-func (c *Course) ChangePrice(price float64) {
+func (c *Course) changePrice(price float64) {
 	c.Price = price
 }

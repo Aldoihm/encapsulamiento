@@ -1,6 +1,8 @@
 package main
 
-import "github.com/Aldoihm/encapsulamiento/course"
+import (
+	"github.com/Aldoihm/encapsulamiento/course"
+)
 
 func main() {
 	Go := course.Course{
@@ -15,4 +17,5 @@ func main() {
 		},
 	}
 	Go.PrintClasses()
+	Go.changePrice()
 }
