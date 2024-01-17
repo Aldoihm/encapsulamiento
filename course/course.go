@@ -23,6 +23,3 @@ func (c Course) PrintClasses() {
 func (c *Course) ChangePrice(price float64) {
 	c.Price = price
 }
-
-//conclución, si quiero modificar los valores de la estrucura, uso punteros, sino pues no.
-//lo que el recomienda es que si un metodo usa puntero, todos los pongamos como punteros.
