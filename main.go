@@ -17,5 +17,4 @@ func main() {
 		},
 	}
 	Go.PrintClasses()
-	Go.changePrice()
 }

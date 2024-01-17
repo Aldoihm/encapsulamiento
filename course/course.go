@@ -2,7 +2,7 @@ package course
 
 import "fmt"
 
-type Course struct {
+type course struct {
 	Name    string
 	Price   float64
 	IsFree  bool
@@ -10,8 +10,20 @@ type Course struct {
 	Classes map[uint]string
 }
 
+// Función constructora
+func NewCourse(name string, price float64, isfree bool) *course {
+	if price == 0 {
+		price = 30
+	}
+	return &course{
+		Name:   name,
+		Price:  price,
+		IsFree: isfree,
+	}
+}
+
 // c Course.. es una copia del valor
-func (c Course) PrintClasses() {
+func (c *course) PrintClasses() {
 	text := "Las clases son: "
 	for _, class := range c.Classes {
 		text += class + ", "
@@ -20,6 +32,8 @@ func (c Course) PrintClasses() {
 }
 
 // Como quiero hacer un cambio, al valor original y no a la copia, pongo de receptor un puntero
-func (c *Course) changePrice(price float64) {
+func (c *course) changePrice(price float64) {
 	c.Price = price
 }
+
+//funcion constructora
