@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/Aldoihm/encapsulamiento/course"
 )
 
@@ -13,5 +15,5 @@ func main() {
 		3: "Maps",
 	}
 
-	Go.PrintClasses()
+	fmt.Printf("%+v", Go)
 }

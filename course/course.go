@@ -35,5 +35,3 @@ func (c *course) PrintClasses() {
 func (c *course) changePrice(price float64) {
 	c.Price = price
 }
-
-//funcion constructora
