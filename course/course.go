@@ -11,7 +11,7 @@ type course struct {
 }
 
 // Función constructora
-func NewCourse(name string, price float64, isfree bool) *course {
+func New(name string, price float64, isfree bool) *course {
 	if price == 0 {
 		price = 30
 	}
